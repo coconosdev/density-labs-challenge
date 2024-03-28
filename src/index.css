@@ -11,3 +11,151 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  > * {
+    flex-basis: 50%;
+  }
+}
+
+.image-wrapper {
+  padding: 30px;
+  background-color: brown;
+}
+
+.route-wrapper {
+  padding: 30px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.list-element {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  flex-basis: 49%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: #999;
+    cursor: pointer;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.pokemon-image-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 22px;
+  background-color: #659cef;
+  border-radius: 3px;
+
+  transition: width 500ms ease-in-out;
+}
+
+.pills-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.type-pill-wrapper {
+  --type-normal: #a9a878;
+  --type-bug: #a8b821;
+  --type-fighting: #c12e27;
+  --type-ghost: #705699;
+  --type-electric: #f8d026;
+  --type-flying: #a991ed;
+  --type-steel: #b8b8d0;
+  --type-psychic: #fb5488;
+  --type-poison: #a03da3;
+  --type-fire: #ef7e2e;
+  --type-ice: #98d8d8;
+  --type-ground: #debf6c;
+  --type-water: #6594f1;
+  --type-dragon: #6f36f9;
+  --type-rock: #b79e38;
+  --type-grass: #79c457;
+  --type-dark: #6e5848;
+  --type-fairy: #e099e1;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  width: 120px;
+  text-align: center;
+}
+
+.progress-bar-wrapper {
+  position: relative;
+}
+
+.progress-bar-number {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  left: 10px;
+  top: 24px;
+}
+
+.top {
+  margin-bottom: 10px;
+}
